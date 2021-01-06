@@ -44,17 +44,18 @@ int coins(void)
     int num_div_c = 0;
     int num_div_d = 0;
 
+    //Calculate the number of times coins divide into change
     if (change >= quarters) {
          num_div_a = change / quarters;
          residual_a = change % quarters;
-    } else if (residual_a >= dimes) {
+    } if (residual_a >= dimes) {
          num_div_b = residual_a / dimes;
          residual_b = residual_a % dimes;
-    } else if (residual_b >= nickels) {
+    } if (residual_b >= nickels) {
          num_div_c = residual_b / nickels;
          residual_c = residual_b % nickels;
-    } else {
-         num_div_d = regsidual_c / pennies;
+    } {
+         num_div_d = residual_c / pennies;
          residual_d = residual_c % pennies;
     }
 
